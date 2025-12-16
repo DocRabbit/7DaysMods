@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+	<Name value="composter" />
+    <DisplayName value="DocRabbit composter"/>
+	<Description value="To aid in lack of Plots and Rotten Flesh" />
+	<Author value="DocRabbit"/>
+	<Version value="21.1" />
+	<Website value="" />
+</xml>

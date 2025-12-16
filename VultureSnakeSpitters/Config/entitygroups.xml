@@ -1,0 +1,23 @@
+<configs>
+<remove xpath="/entitygroups/entitygroup[@name='ZombiesDesert']" />
+<remove xpath="/entitygroups/entitygroup[@name='ZombiesDesertNight']" />
+<append xpath="/entitygroups">
+<entitygroup name="zombiePlagueSpitterSnake">zombiePlagueSpitterSnake</entitygroup>
+<entitygroup name="zombiePlagueSpitterFeralSnake">zombiePlagueSpitterFeralSnake</entitygroup>
+<entitygroup name="zombiePlagueSpitterRadiatedSnake">zombiePlagueSpitterRadiatedSnake</entitygroup>
+<entitygroup name="zombiePlagueSpitterChargedSnake">zombiePlagueSpitterChargedSnake</entitygroup>
+<entitygroup name="zombiePlagueSpitterInfernalSnake">zombiePlagueSpitterInfernalSnake</entitygroup>
+<entitygroup name="animalSnakeLarge">animalSnakeLarge</entitygroup>
+<entitygroup name="ZombiesDesert">
+		zombiePlagueSpitter
+		zombiePlagueSpitterSnake
+		zombieSteveCrawler, .05
+	</entitygroup>
+<entitygroup name="ZombiesDesertNight">
+		zombiePlagueSpitter
+		zombiePlagueSpitterSnake
+		zombiePlagueSpitterFeral
+		zombiePlagueSpitterFeralSnake , .1
+	</entitygroup>
+</append>
+</configs>

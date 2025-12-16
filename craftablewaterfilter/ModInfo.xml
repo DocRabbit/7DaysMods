@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+	<Name value="craftablewaterfilter" />
+	<DisplayName value="DocRabbit Craftable WaterFilter" />
+	<Description value="To aid in crafting water filters in game" />
+	<Author value="DocRabbit"/>
+	<Version value="21.1" />
+	<Website value="" />
+	
+</xml>

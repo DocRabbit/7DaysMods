@@ -1,0 +1,11 @@
+<configs>
+	<append xpath="/recipes">
+
+		<!-- craftable Dew Tarp -->
+		<recipe name="toolDewTarp" count="1" craft_time="10">
+			<ingredient name="resourceCloth" count="5"/>
+            <ingredient name="resourceScrapPolymers" count="5"/>
+		</recipe>
+
+	</append>
+</configs>

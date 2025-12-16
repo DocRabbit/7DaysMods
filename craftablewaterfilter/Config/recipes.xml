@@ -1,0 +1,13 @@
+<configs>
+	<append xpath="/recipes">
+
+		<!-- craftable Water Filter -->
+		<recipe name="toolDewFilter" count="1" craft_time="10">
+			<ingredient name="resourceCloth" count="5"/>
+            <ingredient name="resourceScrapIron" count="5"/>
+			<ingredient name="resourceDuctTape" count="1"/>
+            <ingredient name="resourceCoal" count="5"/>
+		</recipe>
+
+	</append>
+</configs>

@@ -1,0 +1,6 @@
+<config>
+
+    <remove xpath="/items/item[@name='toolBeaker']/property[@name='Group']" /> 
+    <append xpath="/items/item[@name='toolBeaker']"><property name="Group" value="Resources,Tools/Traps,Chemicals" /></append>
+
+</config>

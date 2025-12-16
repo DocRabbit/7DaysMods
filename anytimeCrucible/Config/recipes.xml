@@ -1,0 +1,22 @@
+<!-- Anytime crafting of crucible on workbenches -->
+<config>
+<setattribute xpath="/recipes/recipe[@name='toolForgeCrucible']" name="tags">workbenchCrafting</setattribute>
+<setattribute xpath="/recipes/recipe[@name='toolForgeCrucible']" name="craft_time">10</setattribute>
+<setattribute xpath="/recipes/recipe[@name='toolForgeCrucible']/ingredient[@name='resourceForgedIron']" name="count">20</setattribute>
+<setattribute xpath="/recipes/recipe[@name='toolForgeCrucible']/ingredient[@name='resourceMechanicalParts']" name="count">5</setattribute>
+<setattribute xpath="/recipes/recipe[@name='toolForgeCrucible']/ingredient[@name='resourceRockSmall']" name="count">50</setattribute>
+<setattribute xpath="/recipes/recipe[@name='toolForgeCrucible']/ingredient[@name='resourceOil']" name="count">5</setattribute>
+<setattribute xpath="/recipes/recipe[@name='toolForgeCrucible']/ingredient[@name='resourceClayLump']" name="count">100</setattribute>
+
+<!-- Anytime crafting of crucible in backpack -->
+<append xpath="/recipes">
+<recipe name="toolForgeCrucible" count="1" craft_time="20" tags="packMuleCrafting">
+    <ingredient name="resourceForgedIron" count="20" />
+    <ingredient name="resourceMechanicalParts" count="10" />
+    <ingredient name="resourceRockSmall" count="100" />
+    <ingredient name="resourceOil" count="5" />
+    <ingredient name="resourceClayLump" count="100" />
+  </recipe>
+</append>
+
+</config>

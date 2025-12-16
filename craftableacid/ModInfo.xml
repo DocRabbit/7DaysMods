@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+	
+	<Name value="craftableacid" />
+	<Description value="To aid in lack of acid in game" />
+	<DisplayName value="DocRabbit Craftable Acid" />
+	<Author value="DocRabbit"/>
+	<Version value="21.1" />
+	<Website value="" />
+	
+</xml>

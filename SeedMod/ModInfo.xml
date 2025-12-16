@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+	
+	<Name value="SeedMod" />
+	<DisplayName value="DocRabbit Easy Farming" />
+	<Description value="To guarantee a seed drop on harvest" />
+	<Author value="DocRabbit"/>
+	<Version value="21.1" />
+	<Website value="" />
+	
+</xml>

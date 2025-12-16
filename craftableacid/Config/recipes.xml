@@ -1,0 +1,16 @@
+<configs>
+	<append xpath="/recipes">
+
+		<!-- craftable Acid -->
+		<recipe name="resourceAcid" count="1" craft_time="20" craft_area="campfire" craft_tool="toolCookingPot">
+			<ingredient name="resourceCoal" count="30"/>
+            <ingredient name="drinkJarRiverWater" count="1"/>
+		</recipe>
+        
+        <recipe name="resourceAcid" count="1" craft_time="5" craft_area="chemistryStation">
+			<ingredient name="resourceCoal" count="20"/>
+            <ingredient name="drinkJarRiverWater" count="1"/>
+		</recipe>
+
+	</append>
+</configs>

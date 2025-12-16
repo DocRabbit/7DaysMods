@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+	<Name value="craftabledewgatherer" />
+	<DisplayName value="DocRabbit Craftable DewGatherer" />
+	<Description value="To aid in crafting dew gatherers in game" />
+	<Author value="DocRabbit"/>
+	<Version value="2.0" />
+	<Website value="" />
+	
+</xml>

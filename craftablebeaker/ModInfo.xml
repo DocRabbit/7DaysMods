@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+	<Name value="craftablebeaker" />
+	<DisplayName value="DocRabbit Craftable Beakers" />
+	<Description value="To aid in beaker needs" />
+	<Author value="DocRabbit"/>
+	<Version value="1.0" />
+	<Website value="" />
+</xml>

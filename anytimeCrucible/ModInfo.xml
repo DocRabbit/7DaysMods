@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+	<Name value="anytimeCrucible" />
+	<DisplayName value="DocRabbit Quick Crucible Access" />
+	<Description value="To aid in crafting crucible from workbench at start" />
+	<Author value="DocRabbit"/>
+	<Version value="2.0" />
+	<Website value="" />
+	
+</xml>

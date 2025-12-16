@@ -1,0 +1,15 @@
+<configs>
+<setattribute xpath="/blocks/block[@name='plantedMushroom3HarvestPlayer']/drop[@event='Destroy']" name="prob">1</setattribute>
+<setattribute xpath="/blocks/block[@name='plantedYucca3HarvestPlayer']/drop[@event='Destroy']" name="prob">1</setattribute>
+<setattribute xpath="/blocks/block[@name='plantedCotton3HarvestPlayer']/drop[@event='Destroy']" name="prob">1</setattribute>
+<setattribute xpath="/blocks/block[@name='plantedCoffee3HarvestPlayer']/drop[@event='Destroy']" name="prob">1</setattribute>
+<setattribute xpath="/blocks/block[@name='plantedGoldenrod3HarvestPlayer']/drop[@event='Destroy']" name="prob">1</setattribute>
+<setattribute xpath="/blocks/block[@name='plantedAloe3HarvestPlayer']/drop[@event='Destroy']" name="prob">1</setattribute>
+<setattribute xpath="/blocks/block[@name='plantedBlueberry3HarvestPlayer']/drop[@event='Destroy']" name="prob">1</setattribute>
+<setattribute xpath="/blocks/block[@name='plantedPotato3HarvestPlayer']/drop[@event='Destroy']" name="prob">1</setattribute>
+<setattribute xpath="/blocks/block[@name='plantedChrysanthemum3HarvestPlayer']/drop[@event='Destroy']" name="prob">1</setattribute>
+<setattribute xpath="/blocks/block[@name='plantedCorn3HarvestPlayer']/drop[@event='Destroy']" name="prob">1</setattribute>
+<setattribute xpath="/blocks/block[@name='plantedGraceCorn3HarvestPlayer']/drop[@event='Destroy']" name="prob">1</setattribute>
+<setattribute xpath="/blocks/block[@name='plantedHop3HarvestPlayer']/drop[@event='Destroy']" name="prob">1</setattribute>
+<setattribute xpath="/blocks/block[@name='plantedPumpkin3HarvestPlayer']/drop[@event='Destroy']" name="prob">1</setattribute>
+</configs>

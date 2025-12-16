@@ -1,0 +1,29 @@
+<configs>
+	<append xpath="/recipes">
+
+		<!-- Rotting Flesh and Plots via compost -->
+		<recipe name="composter" count="1" craft_time="10">
+			<ingredient name="resourceScrapIron" count="25"/>
+			<ingredient name="resourceWood" count="50"/>
+		</recipe>
+
+
+		<recipe name="compost" count="2" craft_time="1" craft_area="composter">
+			<ingredient name="foodRawMeat" count="1"/>
+            <ingredient name="resourceYuccaFibers" count="5"/>
+		</recipe>
+        
+    <recipe name="farmPlotBlockPlayer" count="1" craft_time="60" craft_area="composter">
+	<ingredient name="resourceWood" count="4"/>
+	<ingredient name="compost" count="10"/>
+	<ingredient name="resourceClayLump" count="50"/>
+    </recipe>
+    
+		<recipe name="foodRottingFlesh" count="2" craft_time="300" craft_area="composter">
+			<ingredient name="compost" count="2"/>
+		</recipe>
+		
+		
+
+	</append>
+</configs>

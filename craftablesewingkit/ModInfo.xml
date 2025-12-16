@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+	<Name value="craftablesewingkit" />
+	<DisplayName value="DocRabbit Craftable SewingKits" />
+	<Description value="To aid in lack of sewing kits in game" />
+	<Author value="DocRabbit"/>
+	<Version value="1.0" />
+	<Website value="" />
+</xml>

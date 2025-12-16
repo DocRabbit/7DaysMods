@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+	
+	<Name value="digquestwide" />
+	<DisplayName value="DocRabbit Double safe digzone" />
+	<Description value="Doubles the distance out you can move during quest." />
+	<Author value="DocRabbit"/>
+	<Version value="21.1" />
+	<Website value="" />
+	
+</xml>

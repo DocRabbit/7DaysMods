@@ -1,0 +1,4 @@
+<configs>
+<!-- Doubles the Stay Within distance from dig quests from 25M to 50M -->
+<set xpath="/quests/quest[@id='tier1_buried_supplies']/objective[@type='StayWithin']/property[@name='radius']/@value">50</set>
+</configs>

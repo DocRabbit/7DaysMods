@@ -1,0 +1,9 @@
+<config>
+<!-- Sets Cop Kill requirements to 1 -->
+<setattribute xpath="/challenges/challenge[@name='killCop']/objective[@type='Kill']" name="count">1</setattribute>
+
+<!-- Sets Pussface kill count to 10 -->
+<setattribute xpath="/challenges/challenge[@name='wastelandSurvivalKillZombie']/objective[@type='Kill']" name="count">10</setattribute>
+</config>
+
+

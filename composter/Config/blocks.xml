@@ -1,0 +1,55 @@
+<configs>
+	<append xpath="/blocks">		
+		<block name="composter">
+            <property name="Extends" value="cntBirdnest"/>
+			<property name="Class" value="Workstation"/>
+            <property name="Material" value="Mwood"/>
+            <property name="MaxDamage" value="1100"/>
+			<property name="StabilitySupport" value="true"/>
+            <property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/composter.unity3d?composterPrefab"/>
+            <property name="ImposterDontBlock" value="true"/>
+            <property name="Place" value="TowardsPlacerInverted"/>
+            <property name="OnlySimpleRotations" value="true"/>
+            <property name="IsTerrainDecoration" value="true"/>
+			<property name="CustomIcon" value="composter"/>
+			<property name="CreativeMode" value="Player"/>
+            <property name="Stacknumber" value="5"/>
+			
+			<property name="FilterTags" value="floot,ffurniture"/>
+			<property name="Path" value="solid"/>
+			<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
+			
+            <property class="Workstation">
+			<property name="Modules" value="output"/>
+			<property name="CraftingAreaRecipes" value="composter"/>
+            </property>
+            
+			<property name="WorkstationIcon" value="ui_game_symbol_workbench" />
+			<property name="OpenSound" value="open_workbench" />
+			<property name="CloseSound" value="close_workbench" />
+			<property name="WorkstationJournalTip" value="workbenchTip" />
+			
+            <property class="RepairItems">
+                <property name="resourceWood" value="5"/>
+            </property>
+            
+            <drop event="Harvest" name="resourceScrapIron" count="200" tag="allHarvest"/>
+	<drop event="Harvest" name="resourceWood" count="20" tag="allHarvest"/>
+	<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
+	<drop event="Harvest" name="resourceForgedIron" count="10" tag="salvageHarvest"/>
+	<drop event="Harvest" name="resourceMechanicalParts" count="8" tag="salvageHarvest"/>
+	<drop event="Harvest" name="resourceWood" count="20" tag="salvageHarvest"/>
+	<drop event="Destroy" count="0"/>
+	<drop event="Fall" name="terrDestroyedWoodDebris" count="1" prob="0.75" stick_chance="1"/>
+			
+            <property name="TakeDelay" value="15"/>
+			<property name="DescriptionKey" value="composterDesc"/>
+			<property name="EconomicValue" value="776"/>
+			<property name="Group" value="Building,advBuilding"/>
+			<property name="FilterTags" value="fdecor,fother,ffurniture"/>
+            <property name="SortOrder1" value="70i0"/>
+		</block>
+        
+	</append>
+</configs>

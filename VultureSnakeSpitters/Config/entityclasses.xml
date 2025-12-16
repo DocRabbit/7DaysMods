@@ -1,0 +1,158 @@
+<configs>
+<append xpath="/entity_classes">
+<entity_class name="zombiePlagueSpitterSnake" extends="zombieTemplateMale">
+	<property name="UserSpawnType" value="Menu"/>
+	<property name="Censor" value="1,2"/>
+	<property name="Tags" value="entity,zombie,walker"/>
+	<property name="Mesh" value="@:Entities/Zombies/PlagueSpitter/ZPlagueSpitter.prefab"/>
+	<property name="WalkType" value="7"/>
+	<property name="Mass" value="160"/>
+	<property name="SoundRandom" value="plagueroam"/>
+	<property name="SoundAlert" value="plaguealert"/>
+	<property name="SoundAttack" value="plagueattack"/>
+	<property name="SoundHurt" value="plaguepain"/>
+	<property name="SoundDeath" value="plaguedeath"/>
+	<property name="SoundSense" value="plaguesense"/>
+	<property name="SoundStepType" value="barestep"/>
+	<property name="ExperienceGain" value="600"/><!-- XP Plague Spitter -->
+
+	<!-- Dismemberment -->
+	<property name ="DismemberTag_L_HeadGore" value="PlagueSpitter/Dismemberment/Blade/Head;PlagueSpitter/Dismemberment/Blunt/Head" data="type=blade+target=neck+atp=true+detach=true;type=blunt+target=neck+atp=true"/>
+	<property name ="DismemberTag_L_LeftLowerArmGore" value="PlagueSpitter/Dismemberment/Blade/LeftLowerArm" data="type=blade+target=leftforearmroll+atp=true+detach=true+mask=true"/>
+	<property name ="DismemberTag_L_LeftUpperArmGore" value="PlagueSpitter/Dismemberment/Blade/LeftUpperArm" data="type=blade+target=leftarmroll+atp=true+detach=true+mask=true"/>
+	<property name ="DismemberTag_L_LeftUpperLegGore" value="PlagueSpitter/Dismemberment/Blade/LeftUpperLeg" data="type=blade+target=leftupleg+detach=true+mask=true"/>
+	<property name ="DismemberTag_L_RightLowerArmGore" value="PlagueSpitter/Dismemberment/Blade/RightLowerArm" data="type=blade+target=rightforearmroll+atp=true+detach=true+mask=true"/>
+	<property name ="DismemberTag_L_RightUpperArmGore" value="PlagueSpitter/Dismemberment/Blade/RightUpperArm" data="type=blade+target=rightarmroll+atp=true+detach=true+mask=true"/>
+	<property name ="DismemberTag_L_RightUpperLegGore" value="PlagueSpitter/Dismemberment/Blade/RightUpperLeg" data="type=blade+target=rightupleg+detach=true+mask=true"/>
+	<property name ="DismemberTag_L_LeftLowerLegGore" value="linked" data="DismemberTag_L_LeftUpperLegGore"/>
+	<property name ="DismemberTag_L_RightLowerLegGore" value="linked" data="DismemberTag_L_RightUpperLegGore"/>
+
+	<property name="AITask" value="
+	BreakBlock|
+	ApproachDistraction|
+	RangedAttackTarget itemType=1;cooldown=6;duration=7;minRange=4;maxRange=27|
+	ApproachAndAttackTarget class=EntityPlayer,0,EntityBandit,0,EntityEnemyAnimal|
+	ApproachSpot|
+	Look|
+	Wander exePer=1;fade=.4;lookMin=.2;lookMax=.5|
+	"/>
+
+	<!-- Gameplay zombiePlagueSpitterSnake -->
+	<property name="MoveSpeed" value=".4"/>
+	<property name="MoveSpeedAggro" value=".4, 1.35"/> <!-- Normal -->
+	<property name="HandItem" value="meleeHandZombiePlagueSpitterSnake"/>
+	<property name="SightRange" value="27"/>
+	<effect_group>
+		<passive_effect name="HealthMax" operation="base_set" value="^healthStrong"/>
+	</effect_group>
+</entity_class>
+
+<entity_class name="zombiePlagueSpitterFeralSnake" extends="zombiePlagueSpitterSnake">
+	<property name="UserSpawnType" value="Menu"/>
+	<property name="Tags" value="entity,zombie,walker,feral"/>
+	<property name="Mesh" value="@:Entities/Zombies/PlagueSpitter/ZPlagueSpitterFeral.prefab"/>
+	<!-- <property name="SoundSpawn" value="Ambient_Loops/a_fire_embersmoke_sm_lp"/> -->
+
+	<!-- Gameplay zombiePlagueSpitterFeralSnake -->
+	<property name="DismemberMultiplierHead" value=".7"/><property name="DismemberMultiplierArms" value=".7"/><property name="DismemberMultiplierLegs" value=".7"/><!-- Feral -->
+	<property name="PainResistPerHit" value=".7"/><!-- Feral -->
+	<property name="MoveSpeedAggro" value="0.6, 1.45"/> <!-- Normal Feral -->
+	<property name="JumpMaxDistance" value="4.6, 5"/>
+	<property name="HandItem" value="meleeHandZombiePlagueSpitterFeralSnake"/>
+	<property name="ExperienceGain" value="750"/><!-- XP Normal Feral -->
+	<property name="LootDropProb" value=".04"/> <!-- Feral -->
+
+	<effect_group name="Base Effects">
+		<passive_effect name="HealthMax" operation="base_set" value="^healthStrongFeral"/>
+	</effect_group>
+</entity_class>
+
+	<!-- *** ZOMBIE_PLAGUE_SPITTER_RADIATED_SNAKE-->
+<entity_class name="zombiePlagueSpitterRadiatedSnake" extends="zombiePlagueSpitterFeralSnake">
+	<property name="UserSpawnType" value="Menu"/>
+	<property name="Tags" value="entity,zombie,walker,feral,radiated"/>
+	<property name="Mesh" value="@:Entities/Zombies/PlagueSpitter/ZPlagueSpitterRadiated.prefab"/>
+	<property name="MatColor" value="radiated"/>
+	<!--<property name="ParticleOnSpawn" value="@:ParticleEffects/RadiatedParticlesOnMesh.prefab" param1="SetShapeToMesh0"/>-->
+
+	<!-- Gameplay zombiePlagueSpitterRadiatedSnake -->
+	<property name="DismemberMultiplierHead" value=".4"/><property name="DismemberMultiplierArms" value=".4"/><property name="DismemberMultiplierLegs" value=".4"/><!-- Radiated -->
+	<property name="PainResistPerHit" value=".9"/><!-- Radiated -->
+	<property name="ExperienceGain" value="1200"/><!-- XP Normal Radiated -->
+
+	<effect_group name="Base Effects">
+		<passive_effect name="HealthMax" operation="base_set" value="^healthStrongRadiated"/>
+		<triggered_effect trigger="onOtherDamagedSelf" action="ModifyCVar" target="self" cvar="RadiatedRegenAmount" operation="set" value="4"/>
+		<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="buffRadiatedRegen"/>
+	</effect_group>
+</entity_class>
+
+		<!-- *** ZOMBIE_PLAGUE_SPITTER_CHARGED_SNAKE -->
+<entity_class name="zombiePlagueSpitterChargedSnake" extends="zombiePlagueSpitterRadiatedSnake">
+	<property name="MatColor" value="charged"/>
+	<property name="Tags" value="entity,zombie,walker,feral,charged"/>
+	<property name="ExperienceGain" value="1400"/><!-- XP Normal Charged -->
+	<property name="HandItem" value="meleeHandZombiePlagueSpitterChargedSnake"/>
+	<property name="MoveSpeedPattern" value="^chargedMoveSpeedPattern"/>
+	<property name="LootDropProb" value=".1"/> <!-- Charged -->
+	<property name="LootDropEntityClass" value="EntityLootContainerStrong"/>
+
+	<effect_group name="Base Effects">
+		<passive_effect name="HealthMax" operation="base_set" value="^healthStrongCharged"/>
+	</effect_group>
+</entity_class>
+
+		<!-- *** ZOMBIE_PLAGUE_SPITTER_INFERNAL_SNAKE -->
+<entity_class name="zombiePlagueSpitterInfernalSnake" extends="zombiePlagueSpitterRadiatedSnake">
+	<property name="MatColor" value="infernal"/>
+	<property name="Tags" value="entity,zombie,walker,feral,infernal"/>
+	<property name="ExperienceGain" value="1600"/><!-- XP Normal Infernal -->
+	<property name="HandItem" value="meleeHandZombiePlagueSpitterInfernalSnake"/>
+	<property name="MoveSpeedPattern" value="^infernalMoveSpeedPattern"/>
+	<property name="LootDropProb" value=".1"/> <!-- Infernal -->
+	<property name="LootDropEntityClass" value="EntityLootContainerStrong"/>
+
+	<effect_group name="Base Effects">
+		<passive_effect name="HealthMax" operation="base_set" value="^healthStrongInfernal"/>
+		<passive_effect name="BuffResistance" operation="base_set" value=".75" tags="buffInjuryKnockdown01,buffInjuryKnockdown02"/>
+	</effect_group>
+</entity_class>
+
+<!-- Animal Snake Large -->
+
+<entity_class name="animalSnakeLarge" extends="animalSnake">
+	
+	<property name="Mass" value="80"/>
+	<property name="Weight" value="40"/>
+	<property name="SizeScale" value="1.8"/>
+	
+	<!-- Gameplay -->
+	<property name="MaxTurnSpeed" value="120"/>
+	<property name="MoveSpeed" value="0.12"/>
+	<property name="MoveSpeedAggro" value=".3, .3"/>
+	<property name="MoveSpeedPanic" value="0.3"/>
+
+	<property name="HandItem" value="meleeHandAnimalSnakeLarge"/>
+	<property name="AttackTimeoutDay" value="1.1"/>
+	<property name="AttackTimeoutNight" value=".8"/>
+
+	<property name="PainResistPerHit" value="-1"/> <!-- no pain -->
+
+	<property name="ExperienceGain" value="300"/><!-- XP Snake -->
+	<property name="DeadBodyHitPoints" value="300"/>
+	<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
+	<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="20"/> <!-- animalSnake -->
+	<drop event="Harvest" name="resourceLeather" tag="butcherHarvest" count="4"/>
+	<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="10"/>
+	<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="4"/>
+
+	<effect_group name="Base Effects">
+		<passive_effect name="HealthMax" operation="base_set" value="30"/>
+	</effect_group>
+
+	<property name="CanBigHead" value="false"/>
+	<property name="NavObject" value="twitch_spawn,twitch_spawn_other,animaltracking_snake,clear_sleeper"/>
+</entity_class>
+
+</append>
+</configs>

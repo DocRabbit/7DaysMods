@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+	<Name value="craftabledewtarp" />
+	<DisplayName value="DocRabbit Craftable Dew Tarp" />
+	<Description value="To aid in crafting Dew Tarps in game" />
+	<Author value="DocRabbit"/>
+	<Version value="2.0" />
+	<Website value="" />
+	
+</xml>

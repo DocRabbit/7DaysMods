@@ -1,0 +1,147 @@
+<configs>
+<!-- Zombie firing spitter Vulture types-->
+<setattribute xpath="/items/item[@name='meleeHandZombiePlagueSpitter']/property[@class='Action1']/property[@name='Entity']" name="value">animalZombieVulture</setattribute>
+
+<append xpath="/items/item[@name='meleeHandZombiePlagueSpitterFeral']">
+<property class="Action1"> <!-- UseAction -->
+		<property name="Class" value="SpawnEntity"/>
+		<property name="AnimType" value="4"/>
+		<property name="AnimWait" value="1.87"/>
+		<property name="SoundWarn" value="plaguevomitwarning"/>
+		<property name="SoundAttack" value="plaguevomitattack"/>
+		<property name="Entity" value="animalZombieVulture"/>
+		<property name="EntityOffset" value="0, -.1, .45"/>
+	</property>
+</append>
+<append xpath="/items/item[@name='meleeHandZombiePlagueSpitterCharged']">
+<property class="Action1"> <!-- UseAction -->
+		<property name="Class" value="SpawnEntity"/>
+		<property name="AnimType" value="4"/>
+		<property name="AnimWait" value="1.87"/>
+		<property name="SoundWarn" value="plaguevomitwarning"/>
+		<property name="SoundAttack" value="plaguevomitattack"/>
+		<property name="Entity" value="animalZombieVultureRadiated"/>
+		<property name="EntityOffset" value="0, -.1, .45"/>
+	</property>
+</append>
+<append xpath="/items/item[@name='meleeHandZombiePlagueSpitterInfernal']">
+<property class="Action1"> <!-- UseAction -->
+		<property name="Class" value="SpawnEntity"/>
+		<property name="AnimType" value="4"/>
+		<property name="AnimWait" value="1.87"/>
+		<property name="SoundWarn" value="plaguevomitwarning"/>
+		<property name="SoundAttack" value="plaguevomitattack"/>
+		<property name="Entity" value="animalZombieVultureRadiated"/>
+		<property name="EntityOffset" value="0, -.1, .45"/>
+	</property>
+</append>
+
+
+<!-- Snake firing spitter -->
+<append xpath="/items">
+<item name="meleeHandZombiePlagueSpitterSnake">
+	<property name="Extends" value="meleeHandMaster" />
+    <property name="CreativeMode" value="None" />
+    <property name="Degradation" value="99999" param1="true" />
+    <property class="Action0">
+      <property name="Range" value="1.75" />
+      <property name="DamageEntity" value="20" />
+      <property name="DamageBlock" value="100" />
+    </property>
+    <property class="Action1">
+      <!-- UseAction -->
+      <property name="Class" value="SpawnEntity" />
+      <property name="AnimType" value="4" />
+      <property name="AnimWait" value="1.87" />
+      <property name="SoundWarn" value="plaguevomitwarning" />
+      <property name="SoundAttack" value="plaguevomitattack" />
+      <property name="Entity" value="animalSnake">
+      </property>
+      <property name="EntityOffset" value="0, -.1, .45" />
+    </property>
+    <effect_group tiered="false">
+      <passive_effect name="ModSlots" operation="base_set" value="0" />
+      <triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true" buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo" weights=".11,.07,.07,.05,.29,.36,.11" />
+      <triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="10">
+        <!--InfectionRegular-->
+        <requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0" />
+      </triggered_effect>
+      <triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="1800" />
+      <!--AbrasionRegular-->
+    </effect_group>
+
+</item>
+
+<item name="meleeHandZombiePlagueSpitterFeralSnake">
+	<property name="Extends" value="meleeHandZombiePlagueSpitterSnake"/>
+	<property name="CreativeMode" value="None"/>
+	<property class="Action0">
+		<property name="DamageEntity" value="40"/>
+		<property name="DamageBlock" value="200"/>
+	</property>
+	<property class="Action1">
+      <!-- UseAction -->
+      <property name="Class" value="SpawnEntity" />
+      <property name="AnimType" value="4" />
+      <property name="AnimWait" value="1.87" />
+      <property name="SoundWarn" value="plaguevomitwarning" />
+      <property name="SoundAttack" value="plaguevomitattack" />
+      <property name="Entity" value="animalSnakeLarge" />
+    </property>
+</item>
+
+<item name="meleeHandZombiePlagueSpitterChargedSnake">
+	<property name="Extends" value="meleeHandZombiePlagueSpitterSnake"/>
+	<property name="CreativeMode" value="None"/>
+	<property class="Action0">
+		<property name="DamageEntity" value="60"/>
+		<property name="DamageBlock" value="150"/>
+	</property>
+	<property class="Action1">
+      <!-- UseAction -->
+      <property name="Class" value="SpawnEntity" />
+      <property name="AnimType" value="4" />
+      <property name="AnimWait" value="1.87" />
+      <property name="SoundWarn" value="plaguevomitwarning" />
+      <property name="SoundAttack" value="plaguevomitattack" />
+      <property name="Entity" value="animalSnakeLarge" />
+      </property>
+</item>
+
+<item name="meleeHandZombiePlagueSpitterInfernalSnake">
+	<property name="Extends" value="meleeHandZombiePlagueSpitterSnake"/>
+	<property name="CreativeMode" value="None"/>
+	<property class="Action0">
+		<property name="DamageEntity" value="45"/>
+		<property name="DamageBlock" value="250"/>
+	</property>
+	<property class="Action1">
+      <!-- UseAction -->
+      <property name="Class" value="SpawnEntity" />
+      <property name="AnimType" value="4" />
+      <property name="AnimWait" value="1.87" />
+      <property name="SoundWarn" value="plaguevomitwarning" />
+      <property name="SoundAttack" value="plaguevomitattack" />
+      <property name="Entity" value="animalSnakeLarge" />
+      </property>
+</item>
+
+<item name="meleeHandAnimalSnakeLarge">
+	<property name="Extends" value="meleeHandAnimalSnake"/>
+	
+	<property class="Action0">
+		<property name="Delay" value="1.5"/>
+		<property name="Range" value="2.2"/>
+		<property name="DamageEntity" value="20"/>
+		<property name="DamageBlock" value="4"/>
+	</property>
+	<effect_group name="meleeHandAnimalSnake" tiered="false">
+		<passive_effect name="ModSlots" operation="base_set" value="0"/>
+		<!--<passive_effect name="AttacksPerMinute" operation="base_set" value="75"/> A16 .8 -->
+		<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
+			buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
+			weights=".11,.07,.07,.05,.29,.46,.21"/>
+	</effect_group>
+</item>
+</append>
+</configs>
